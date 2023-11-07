@@ -1,3 +1,12 @@
 @forward "properties";
 
+/*Reglas generales*/
+
+*{
+    box-sizing: border-box;
+}
+
+html, body, main, header, nav{
+    width: 100%;
+}
 

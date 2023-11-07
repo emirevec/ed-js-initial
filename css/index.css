@@ -238,4 +238,13 @@
   border-color: #36c;
 }
 
+/*Reglas generales*/
+* {
+  box-sizing: border-box;
+}
+
+html, body, main, header, nav {
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */
