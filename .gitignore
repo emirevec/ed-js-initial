@@ -16,6 +16,7 @@ assets/
 *.css.map
 *.sass.map
 *.scss.map
+*.css
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

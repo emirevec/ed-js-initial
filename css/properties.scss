@@ -1,0 +1,23 @@
+@use "variables" as var;
+@use 'sass:math';
+
+@each $vn, $vw, $max in var.$media{
+    @media screen and (min-width: $vw) {
+        .container,
+        .cont-#{$vn}{
+            max-width: $max;
+    }
+    @for $i from 1 through var.$col{
+        .col-#{$vn}-#{$i}{
+            width: calc(math.div($i, var.$col)*100);
+        }
+    }
+
+    }
+}
+
+@each $pn, $pv in var.$attributes{
+    @each $cn, $cv in var.$colors{
+        .#{$pn}-#{$cn}{#{$pv}: $cv;}
+    }
+}
