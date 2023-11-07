@@ -1,0 +1,19 @@
+$color-primary: rgb(219, 121, 65);
+$color-secondary: rgb(131, 73, 39);
+$colors: 
+        light rgb(209, 172, 151),
+        dark rgb(55, 31, 17),
+        success  #3c6,
+        warning #da3,
+        danger  #c33,
+        info #36c;
+$attributes: 
+    text color,
+    bg background-color,
+    border border-color;
+$media: 
+    md  768px   720px,
+    lg  992px   960px,
+    xl  1200px  1140px,
+    xxl 1400px  1320px;
+$col: 12;
