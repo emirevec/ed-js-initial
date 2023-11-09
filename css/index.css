@@ -166,7 +166,7 @@
     width: 100%;
   }
 }
-.text-light {
+.text-light, button {
   color: rgb(210, 187, 174);
 }
 
@@ -190,11 +190,11 @@
   color: #36c;
 }
 
-.bg-light {
+.bg-light, header, main {
   background-color: rgb(210, 187, 174);
 }
 
-.bg-dark {
+.bg-dark, button {
   background-color: rgb(89, 59, 42);
 }
 
@@ -249,15 +249,10 @@ html, body, nav {
   width: 100%;
 }
 
-body {
-  background-color: rgb(210, 187, 174);
-}
-
 header, main {
   margin: 0.5rem;
   border: 0;
   padding: 0.25rem;
-  background-color: rgb(133, 110, 96);
   border-radius: 0.25rem;
   color: rgb(243, 125, 57);
 }
@@ -269,6 +264,20 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 0;
+  height: 17vh;
+}
+
+main {
+  height: 77vh;
+}
+
+button {
+  margin: 0.5rem;
+  border: 0;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=index.css.map */
