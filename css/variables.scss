@@ -1,12 +1,12 @@
-$color-primary: rgb(219, 121, 65);
-$color-secondary: rgb(131, 73, 39);
-$colors: 
-        light rgb(209, 172, 151),
-        dark rgb(55, 31, 17),
-        success  #3c6,
-        warning #da3,
-        danger  #c33,
-        info #36c;
+$color-primary: rgb(243, 125, 57);
+$color-secondary: rgb(133, 110, 96);
+$colors: (
+        light: rgb(210, 187, 174),
+        dark: rgb(89, 59, 42),
+        success:  #3c6,
+        warning: #da3,
+        danger:  #c33,
+        info: #36c);
 $attributes: 
     text color,
     bg background-color,
