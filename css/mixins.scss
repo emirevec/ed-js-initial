@@ -1,0 +1,14 @@
+@mixin normalize($mv:0, $bv:0, $pv:0, $ma:margin, $bo:border, $pa:padding){
+    #{$ma}:$mv;
+    #{$bo}:$bv;
+    #{$pa}:$pv;
+}
+
+@mixin flexbox($dv:flex, $fd:row, $jc:center, $ai:center, $fw:wrap, $g:0){
+    display: $dv;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;
+    gap: $g;
+}
