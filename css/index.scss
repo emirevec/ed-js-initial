@@ -1,12 +1,41 @@
 @forward "properties";
+@use "variables" as var;
+@use "mixins" as mix;
 
 /*Reglas generales*/
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-html, body, main, header, nav{
+html, body, nav{
     width: 100%;
 }
+
+header, main{
+    @extend .bg-light;
+    @include mix.normalize($mv:.5rem, $pv:.25rem);
+    border-radius: .25rem;
+    color: var.$color-primary;
+}
+
+header{
+    @include mix.flexbox();
+    height: 17vh;
+}
+
+main{
+    height: 77vh;
+}
+button{
+    @extend .bg-dark, .text-light;
+    @include mix.normalize($mv:.5rem, $pv:.5rem);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .25rem;
+}
+
+
 

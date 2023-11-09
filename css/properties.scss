@@ -9,7 +9,7 @@
     }
     @for $i from 1 through var.$col{
         .col-#{$vn}-#{$i}{
-            width: calc(math.div($i, var.$col)*100);
+            width: math.percentage($i / var.$col);
         }
     }
     }
