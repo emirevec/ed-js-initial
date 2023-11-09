@@ -10,7 +10,7 @@
     scroll-behavior: smooth;
 }
 
-html, body, main, nav{
+html, body, nav{
     width: 100%;
 }
 
@@ -18,10 +18,18 @@ body{
     background-color: map-get(var.$colors, light);
 }
 
-header{
+header, main{
     @include mix.normalize($mv:.5rem, $pv:.25rem);
-    @include mix.flexbox();
     background-color: var.$color-secondary;
     border-radius: .25rem;
     color: var.$color-primary;
 }
+
+header{
+    @include mix.flexbox();
+}
+
+
+
+
+
