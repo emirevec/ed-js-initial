@@ -167,11 +167,11 @@
   }
 }
 .text-light {
-  color: rgb(209, 172, 151);
+  color: rgb(210, 187, 174);
 }
 
 .text-dark {
-  color: rgb(55, 31, 17);
+  color: rgb(89, 59, 42);
 }
 
 .text-success {
@@ -191,11 +191,11 @@
 }
 
 .bg-light {
-  background-color: rgb(209, 172, 151);
+  background-color: rgb(210, 187, 174);
 }
 
 .bg-dark {
-  background-color: rgb(55, 31, 17);
+  background-color: rgb(89, 59, 42);
 }
 
 .bg-success {
@@ -215,11 +215,11 @@
 }
 
 .border-light {
-  border-color: rgb(209, 172, 151);
+  border-color: rgb(210, 187, 174);
 }
 
 .border-dark {
-  border-color: rgb(55, 31, 17);
+  border-color: rgb(89, 59, 42);
 }
 
 .border-success {
@@ -247,6 +247,25 @@
 
 html, body, main, nav {
   width: 100%;
+}
+
+body {
+  background-color: rgb(210, 187, 174);
+}
+
+header {
+  margin: 0.5rem;
+  border: 0;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  background-color: rgb(133, 110, 96);
+  border-radius: 0.25rem;
+  color: rgb(243, 125, 57);
 }
 
 /*# sourceMappingURL=index.css.map */
