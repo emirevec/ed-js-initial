@@ -1,0 +1,5 @@
+@mixin normalize($mv:0, $bv:0, $pv:0, $ma:margin, $bo:border, $pa:padding){
+    #{$ma}:$mv;
+    #{$bo}:$bv;
+    #{$pa}:$pv;
+}
