@@ -9,9 +9,11 @@
 <body>
     <div id="action"></div>
     <script id="index" type="text/x-handlebars-template">
-        {{#with autor}}
-            <h2>{{nombre}}, {{apellido}} </h2>
-        {{/with}}
+        {{#if mayor_edad}}
+            <h2>{{nombre}}</h2>
+        {{else}}
+            <div>No eres mayor de edad.</div>
+        {{/if}}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script>
@@ -19,10 +21,8 @@
         console.log(template);
         let compile = Handlebars.compile(template);
         let data = {
-            autor: {
-                nombre: "Jose",
-                apellido: "Hernandez"
-            }
+            mayor_edad: true,
+            nombre: "Carlos"
         }
         let compiledHTML = compile(data);
         document.getElementById("action").innerHTML += compiledHTML;
