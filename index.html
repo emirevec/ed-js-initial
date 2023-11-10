@@ -8,29 +8,20 @@
 </head>
 <body>
     <div id="action"></div>
-    <script id="index" type="text/x-handlebars-template">
-        {{link_to "contacto" "Pagina de contacto"}}
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="js/templates.js"></script>
+    
     <script>
         
-        let template = document.getElementById("index").innerHTML;
+        let template = Handlebars.templates["user"]
         
-        let compile = Handlebars.compile(template);
+        let data = {
+            name:"juan",
+            surname: "perez"
+        };
 
-        let data = {};
+        document.getElementById("action").innerHTML += template(data);
         
-        Handlebars.registerHelper("link_to", function(url, name) {
-            name = Handlebars.Utils.escapeExpression(name),
-            url = Handlebars.Utils.escapeExpression(url),
-            link = "<a href=\""+ location.protocol +"//"+ location.host +"/"+ url + "\">"+ name + "</a>";
-
-            return new Handlebars.SafeString(link);
-        });
-
-        let compiledHTML = compile(data);
-        document.getElementById("action").innerHTML += compiledHTML;
-
     </script>
 </body>
 </html>
