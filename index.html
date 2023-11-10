@@ -9,9 +9,9 @@
 <body>
     <div id="action"></div>
     <script id="index" type="text/x-handlebars-template">
-        {{#unless mayor_edad}}
-            <h2>{{nombre}}</h2>
-        {{/unless}}
+        {{#each comentarios}}
+            <div>{{autor}}: <em>{{mensaje}}</em> </div>
+        {{/each}}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script>
@@ -19,8 +19,16 @@
         console.log(template);
         let compile = Handlebars.compile(template);
         let data = {
-            mayor_edad: true,
-            nombre: "Carlos"
+            comentarios: [
+                {
+                    autor: "juan",
+                    mensaje: "hola"
+                },
+                {
+                    autor: "pepe",
+                    mensaje: "chau"
+                }
+            ]
         }
         let compiledHTML = compile(data);
         document.getElementById("action").innerHTML += compiledHTML;
