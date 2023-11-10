@@ -9,14 +9,22 @@
 <body>
     <div id="action"></div>
     <script id="index" type="text/x-handlebars-template">
-        <div>Hola soy {{{name}}} </div>
+        {{#with autor}}
+            <h2>{{nombre}}, {{apellido}} </h2>
+        {{/with}}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script>
         let template = document.getElementById("index").innerHTML;
         console.log(template);
         let compile = Handlebars.compile(template);
-        let compiledHTML = compile({name: "Juan Domingo"});
+        let data = {
+            autor: {
+                nombre: "Jose",
+                apellido: "Hernandez"
+            }
+        }
+        let compiledHTML = compile(data);
         document.getElementById("action").innerHTML += compiledHTML;
 
     </script>
