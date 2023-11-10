@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="action"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="js/templates.js"></script>
+    
+    <script>
+        
+        let template = Handlebars.templates["user"]
+        
+        let data = {
+            name:"juan",
+            surname: "perez"
+        };
+
+        document.getElementById("action").innerHTML += template(data);
+        
+    </script>
+</body>
+</html>
