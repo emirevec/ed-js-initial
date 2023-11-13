@@ -15,6 +15,48 @@
         <section>
             <h2>Nueva implementación</h2>
             <button>Calcular</button>
+            <form id="implementar" action="">
+                <h3>Ingrese los datos debajo:</h3>
+                <label id="implementar_tipos">Seleccione el tipo:
+                    <select name="implementar_tipos" required>
+                        <option value="Eólica">Eólica
+                        <option value="Hidroeléctrica">Hidroeléctrica
+                        <option value="Solar">Solar
+                    </select>
+                </label>
+                <br>
+                <label id="implementar_descripcion">Descripción:
+                    <input name="implementar_descripcion" 
+                    type="text" 
+                    required
+                    placeholder="Ingrese una breve descripción."
+                    maxlength="20"
+                    required>
+                    <p>No debe superar los 20 caracteres.</p>
+                </label>
+                <label id="implementar_energia">Energía generada en Kw/h:
+                    <input name="implementar_energia"
+                    type="number"
+                    placeholder="Ingrese la energía generada."
+                    required>
+                    <p>Ingrese números enteros.</p>
+                </label>
+                <label id="implementar_presupuesto">Presupuesto requerido en pesos:
+                    <input name="implementar_presupuesto"
+                    type="number"
+                    placeholder="Ingrese el presupuesto necesario."
+                    required>
+                    <p>Ingrese numeros enteros.</p>
+                </label>
+                <label id="implementar_tiempo">Tiempo estimado de implementación en meses:
+                    <input name="implementar_tiempo"
+                    type="number"
+                    placeholder="Ingrese el presupuesto necesario."
+                    required>
+                    <p>Ingrese numeros enteros.</p>
+                </label>
+                <button>Agregar implementación</button>
+            </form>
         </section>
         <section>
             <h2>Resultado</h2>
