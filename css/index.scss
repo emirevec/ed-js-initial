@@ -20,6 +20,7 @@ body{
 
 header, main{
     @extend .bg-light;
+    @extend .shadow;
     @include mix.normalize($mv:.5rem, $pv:.25rem);
     border-radius: .25rem;
     color: var.$color-primary;
