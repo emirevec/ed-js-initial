@@ -296,11 +296,18 @@ form {
 form input, form select {
   width: 100%;
 }
+form input:focus + .validation, form select:focus + .validation {
+  opacity: 1;
+}
 form h3, form select, form p {
   margin-bottom: 0.35rem;
 }
 form p {
   font-weight: 400;
+}
+form .validation {
+  opacity: 0;
+  overflow: hidden;
 }
 
 button {

@@ -48,6 +48,11 @@ form{
 
     input, select{
         width: 100%;
+        &:focus{
+            & + .validation{
+                opacity: 1;
+            }
+        }
     }
 
     h3, select, p{
@@ -56,6 +61,11 @@ form{
 
     p{
         font-weight: 400;
+    }
+    
+    .validation{
+        opacity: 0;
+        overflow: hidden;
     }
 }
 
