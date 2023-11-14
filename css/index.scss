@@ -15,8 +15,7 @@ html, body{
 }
 
 header, main{
-    @extend .bg-light;
-    @extend .shadow;
+    @extend .bg-light, .shadow;
     @include mix.normalize($mv:.5rem, $pv:.25rem);
     border-radius: .25rem;
     color: var.$color-primary;
@@ -32,6 +31,22 @@ main{
     display: grid;
     grid-template-columns: auto;
 }
+
+form{
+    @include mix.normalize(.5rem, $pv:.25rem);
+    @extend .col-md-8;
+    
+    input, select{
+        width: 100%;
+    }
+
+    h3, select, p{
+        margin-bottom:  .5rem;
+    }
+}
+
+
+
 
 button{
     @extend .bg-dark, .text-light;

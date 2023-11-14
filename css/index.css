@@ -24,7 +24,7 @@
   .col-md-7 {
     width: 58.3333333333%;
   }
-  .col-md-8 {
+  .col-md-8, form {
     width: 66.6666666667%;
   }
   .col-md-9 {
@@ -271,6 +271,18 @@ main {
   height: 77vh;
   display: grid;
   grid-template-columns: auto;
+}
+
+form {
+  margin: 0.5rem;
+  border: 0;
+  padding: 0.25rem;
+}
+form input, form select {
+  width: 100%;
+}
+form h3, form select, form p {
+  margin-bottom: 0.5rem;
 }
 
 button {
