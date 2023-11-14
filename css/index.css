@@ -78,7 +78,7 @@
   .col-lg-11 {
     width: 91.6666666667%;
   }
-  .col-lg-12 {
+  .col-lg-12, form {
     width: 100%;
   }
 }
@@ -328,8 +328,13 @@ button {
 }
 @media screen and (min-width: 992px) {
   main {
-    grid-template-columns: 40% auto;
+    grid-template-columns: 35% auto;
     grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    grid-template-columns: 30% auto;
   }
 }
 
