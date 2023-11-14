@@ -15,8 +15,7 @@ html, body{
 }
 
 header, main{
-    @extend .bg-light;
-    @extend .shadow;
+    @extend .bg-light, .shadow;
     @include mix.normalize($mv:.5rem, $pv:.25rem);
     border-radius: .25rem;
     color: var.$color-primary;
@@ -32,6 +31,31 @@ main{
     display: grid;
     grid-template-columns: auto;
 }
+
+form{
+    @include mix.normalize(.5rem, $pv:.5rem);
+    @include mix.flexbox($fd:column, $ai:flex-start, $g:.25rem);
+    @extend .shadow, .col-md-8;
+    background-color: white;
+    border-radius: .5rem;
+    color: var.$color-secondary;
+    font-weight: 700;
+
+    input, select{
+        width: 100%;
+    }
+
+    h3, select, p{
+        margin-bottom: .35rem;
+    }
+
+    p{
+        font-weight: 400;
+    }
+}
+
+
+
 
 button{
     @extend .bg-dark, .text-light;
