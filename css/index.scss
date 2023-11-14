@@ -59,9 +59,6 @@ form{
     }
 }
 
-
-
-
 button{
     @extend .bg-dark, .text-light;
     @include mix.normalize($mv:.5rem, $pv:.5rem);
@@ -76,6 +73,12 @@ button{
                 0 4px 4px rgba(0,0,0,0.12), 
                 0 8px 8px rgba(0,0,0,0.12),
                 0 16px 16px rgba(0,0,0,0.12);   
+}
+
+@media screen and (min-width: 768px) {
+    section{
+        @include mix.flexbox($fd:column);
+    }
 }
  
 @media screen and (min-width: 992px) {
