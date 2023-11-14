@@ -245,8 +245,20 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+html, body, section {
   width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 17% auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
 }
 
 header, main {
@@ -264,13 +276,6 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 0;
-  height: 17vh;
-}
-
-main {
-  height: 77vh;
-  display: grid;
-  grid-template-columns: auto;
 }
 
 form {
@@ -309,6 +314,13 @@ button {
 
 .shadow, header, main, form {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: 40% auto;
+    grid-template-rows: auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
