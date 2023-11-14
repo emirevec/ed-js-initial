@@ -69,6 +69,22 @@ form{
     }
 }
 
+form{
+    @include mix.normalize(.5rem, $pv:.25rem);
+    @extend .col-md-8;
+    
+    input, select{
+        width: 100%;
+    }
+
+    h3, select, p{
+        margin-bottom:  .5rem;
+    }
+}
+
+
+
+
 button{
     @extend .bg-dark, .text-light;
     @include mix.normalize($mv:.5rem, $pv:.5rem);
