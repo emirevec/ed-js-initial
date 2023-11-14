@@ -245,7 +245,7 @@
   scroll-behavior: smooth;
 }
 
-html, body, nav {
+html, body {
   width: 100%;
 }
 
@@ -269,6 +269,8 @@ header {
 
 main {
   height: 77vh;
+  display: grid;
+  grid-template-columns: auto;
 }
 
 button {

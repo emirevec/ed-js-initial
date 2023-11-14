@@ -10,7 +10,7 @@
     scroll-behavior: smooth;
 }
 
-html, body, nav{
+html, body{
     width: 100%;
 }
 
@@ -29,7 +29,10 @@ header{
 
 main{
     height: 77vh;
+    display: grid;
+    grid-template-columns: auto;
 }
+
 button{
     @extend .bg-dark, .text-light;
     @include mix.normalize($mv:.5rem, $pv:.5rem);
