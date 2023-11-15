@@ -166,7 +166,7 @@
     width: 100%;
   }
 }
-.text-light, button {
+.text-light {
   color: rgb(210, 187, 174);
 }
 
@@ -266,7 +266,7 @@ header, main {
   border: 0;
   padding: 0.25rem;
   border-radius: 0.25rem;
-  color: rgb(243, 125, 57);
+  color: rgb(133, 110, 96);
 }
 
 header {
@@ -290,8 +290,7 @@ form {
   gap: 0.25rem;
   background-color: white;
   border-radius: 0.5rem;
-  color: rgb(133, 110, 96);
-  font-weight: 700;
+  font-weight: 400;
 }
 form input, form select {
   width: 100%;
@@ -314,6 +313,7 @@ button {
   margin: 0.5rem;
   border: 0;
   padding: 0.5rem;
+  color: rgb(241, 149, 96);
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 0.25rem;
@@ -329,16 +329,14 @@ table {
   width: 100%;
   background-color: white;
   border-collapse: collapse;
+  color: rgb(133, 110, 96);
+  font-weight: 400;
 }
 
 th, td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
-}
-
-th {
-  background-color: rgb(133, 110, 96);
 }
 
 .shadow, header, main, form, .table {

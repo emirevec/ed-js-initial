@@ -44,8 +44,8 @@ form{
     @extend .shadow, .col-md-8, .col-lg-12;
     background-color: white;
     border-radius: .5rem;
-    color: var.$color-secondary;
-    font-weight: 700;
+    //color: var.$color-primary;
+    font-weight: 400;
 
     input, select{
         width: 100%;
@@ -81,8 +81,9 @@ form{
 }
 
 button{
-    @extend .bg-dark, .text-light;
+    @extend .bg-dark;
     @include mix.normalize($mv:.5rem, $pv:.5rem);
+    color: var.$color-secondary;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .25rem;
@@ -99,16 +100,14 @@ table {
     width: 100%;
     background-color: white;
     border-collapse: collapse;
+    color: var.$color-primary;
+    font-weight: 400;
   }
 
   th, td {
     border: 1px solid #ddd;
     padding: .5rem;
     text-align: left;
-  }
-
-  th {
-    background-color: var.$color-secondary;
   }
   
 .shadow{
