@@ -52,6 +52,16 @@ form{
             & + .validation{
                 opacity: 1;
             }
+
+            &:valid{
+                @extend .border-success;
+                & + .validation{ @extend .text-success; }
+            }
+
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger;
+                & + .validation{ @extend .text-danger; }
+            }
         }
     }
 
@@ -68,22 +78,6 @@ form{
         overflow: hidden;
     }
 }
-
-form{
-    @include mix.normalize(.5rem, $pv:.25rem);
-    @extend .col-md-8;
-    
-    input, select{
-        width: 100%;
-    }
-
-    h3, select, p{
-        margin-bottom:  .5rem;
-    }
-}
-
-
-
 
 button{
     @extend .bg-dark, .text-light;

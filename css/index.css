@@ -174,7 +174,7 @@
   color: rgb(89, 59, 42);
 }
 
-.text-success {
+.text-success, form input:focus:valid + .validation, form select:focus:valid + .validation {
   color: #3c6;
 }
 
@@ -182,7 +182,7 @@
   color: #da3;
 }
 
-.text-danger {
+.text-danger, form input:focus:not(:placeholder-shown):invalid + .validation, form select:focus:not(:placeholder-shown):invalid + .validation {
   color: #c33;
 }
 
@@ -222,7 +222,7 @@
   border-color: rgb(89, 59, 42);
 }
 
-.border-success {
+.border-success, form input:focus:valid, form select:focus:valid {
   border-color: #3c6;
 }
 
@@ -230,7 +230,7 @@
   border-color: #da3;
 }
 
-.border-danger {
+.border-danger, form input:focus:not(:placeholder-shown):invalid, form select:focus:not(:placeholder-shown):invalid {
   border-color: #c33;
 }
 
@@ -308,18 +308,6 @@ form p {
 form .validation {
   opacity: 0;
   overflow: hidden;
-}
-
-form {
-  margin: 0.5rem;
-  border: 0;
-  padding: 0.25rem;
-}
-form input, form select {
-  width: 100%;
-}
-form h3, form select, form p {
-  margin-bottom: 0.5rem;
 }
 
 button {
