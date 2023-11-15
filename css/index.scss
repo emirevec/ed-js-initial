@@ -130,6 +130,10 @@ table {
         grid-template-columns: 35% auto;
         grid-template-rows: auto;
     }
+    
+    .resultado{
+        justify-content: flex-start;
+    }
 }
 
 @media screen and (min-width: 1200px) {
