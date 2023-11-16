@@ -60,5 +60,12 @@
         </section>
     </main>
     <script src="js/index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+      let template = Handlebars.templates["table"]
+      document.getElementById("table").innerHTML +=template(data);
+    </script>
 </body>
 </html>
