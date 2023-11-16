@@ -24,7 +24,7 @@
   .col-md-7 {
     width: 58.3333333333%;
   }
-  .col-md-8 {
+  .col-md-8, form, .table {
     width: 66.6666666667%;
   }
   .col-md-9 {
@@ -75,10 +75,10 @@
   .col-lg-10 {
     width: 83.3333333333%;
   }
-  .col-lg-11 {
+  .col-lg-11, .table {
     width: 91.6666666667%;
   }
-  .col-lg-12 {
+  .col-lg-12, form {
     width: 100%;
   }
 }
@@ -166,7 +166,7 @@
     width: 100%;
   }
 }
-.text-light, button {
+.text-light {
   color: rgb(210, 187, 174);
 }
 
@@ -174,7 +174,7 @@
   color: rgb(89, 59, 42);
 }
 
-.text-success {
+.text-success, form input:focus:valid + .validation, form select:focus:valid + .validation {
   color: #3c6;
 }
 
@@ -182,7 +182,7 @@
   color: #da3;
 }
 
-.text-danger {
+.text-danger, form input:focus:not(:placeholder-shown):invalid + .validation, form select:focus:not(:placeholder-shown):invalid + .validation {
   color: #c33;
 }
 
@@ -222,7 +222,7 @@
   border-color: rgb(89, 59, 42);
 }
 
-.border-success {
+.border-success, form input:focus:valid, form select:focus:valid {
   border-color: #3c6;
 }
 
@@ -230,7 +230,7 @@
   border-color: #da3;
 }
 
-.border-danger {
+.border-danger, form input:focus:not(:placeholder-shown):invalid, form select:focus:not(:placeholder-shown):invalid {
   border-color: #c33;
 }
 
@@ -245,8 +245,20 @@
   scroll-behavior: smooth;
 }
 
-html, body, nav {
+html, body {
   width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 17% auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
 }
 
 header, main {
@@ -254,7 +266,7 @@ header, main {
   border: 0;
   padding: 0.25rem;
   border-radius: 0.25rem;
-  color: rgb(243, 125, 57);
+  color: rgb(133, 110, 96);
 }
 
 header {
@@ -264,20 +276,96 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 0;
-  height: 17vh;
 }
 
-main {
-  height: 77vh;
+form {
+  margin: 0.5rem;
+  border: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  font-weight: 400;
+}
+form input, form select {
+  width: 100%;
+}
+form input:focus + .validation, form select:focus + .validation {
+  opacity: 1;
+}
+form h3, form select, form p {
+  margin-bottom: 0.35rem;
+}
+form p {
+  font-weight: 400;
+}
+form .validation {
+  opacity: 0;
+  overflow: hidden;
 }
 
 button {
   margin: 0.5rem;
   border: 0;
   padding: 0.5rem;
+  color: rgb(241, 149, 96);
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 0.25rem;
+}
+
+.table {
+  margin: 0.5rem;
+  overflow-x: hidden;
+  border-radius: 0.5rem;
+}
+
+table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+  color: rgb(133, 110, 96);
+  font-weight: 400;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.shadow, header, main, form, .table {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: 35% auto;
+    grid-template-rows: auto;
+  }
+  .resultado {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    grid-template-columns: 30% auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

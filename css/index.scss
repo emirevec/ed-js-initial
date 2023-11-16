@@ -1,4 +1,5 @@
 @forward "properties";
+@use 'sass:math';
 @use "variables" as var;
 @use "mixins" as mix;
 
@@ -10,12 +11,24 @@
     scroll-behavior: smooth;
 }
 
-html, body, nav{
+html, body{
     width: 100%;
 }
 
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 17% auto;
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
 header, main{
-    @extend .bg-light;
+    @extend .bg-light, .shadow;
     @include mix.normalize($mv:.5rem, $pv:.25rem);
     border-radius: .25rem;
     color: var.$color-primary;
@@ -23,19 +36,107 @@ header, main{
 
 header{
     @include mix.flexbox();
-    height: 17vh;
 }
 
-main{
-    height: 77vh;
+form{
+    @include mix.normalize(.5rem, $pv:.5rem);
+    @include mix.flexbox($fd:column, $ai:flex-start, $g:.25rem);
+    @extend .shadow, .col-md-8, .col-lg-12;
+    background-color: white;
+    border-radius: .5rem;
+    //color: var.$color-primary;
+    font-weight: 400;
+
+    input, select{
+        width: 100%;
+        &:focus{
+            & + .validation{
+                opacity: 1;
+            }
+
+            &:valid{
+                @extend .border-success;
+                & + .validation{ @extend .text-success; }
+            }
+
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger;
+                & + .validation{ @extend .text-danger; }
+            }
+        }
+    }
+
+    h3, select, p{
+        margin-bottom: .35rem;
+    }
+
+    p{
+        font-weight: 400;
+    }
+    
+    .validation{
+        opacity: 0;
+        overflow: hidden;
+    }
 }
+
 button{
-    @extend .bg-dark, .text-light;
+    @extend .bg-dark;
     @include mix.normalize($mv:.5rem, $pv:.5rem);
+    color: var.$color-secondary;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .25rem;
 }
 
+.table{
+    @extend .shadow, .col-md-8, .col-lg-11;
+    margin: .5rem;
+    overflow-x: hidden;
+    border-radius: .5rem;
+}
 
+table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    color: var.$color-primary;
+    font-weight: 400;
+  }
 
+  th, td {
+    border: 1px solid #ddd;
+    padding: .5rem;
+    text-align: left;
+  }
+  
+.shadow{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.12), 
+                0 8px 8px rgba(0,0,0,0.12),
+                0 16px 16px rgba(0,0,0,0.12);   
+}
+
+@media screen and (min-width: 768px) {
+    section{
+        @include mix.flexbox($fd:column);
+    }
+}
+ 
+@media screen and (min-width: 992px) {
+    main{
+        grid-template-columns: 35% auto;
+        grid-template-rows: auto;
+    }
+    
+    .resultado{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main{
+        grid-template-columns: 30% auto;
+    }
+}

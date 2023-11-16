@@ -15,11 +15,84 @@
         <section>
             <h2>Nueva implementación</h2>
             <button>Calcular</button>
+            <form id="implementar" action="">
+                <h3>Ingrese los datos debajo:</h3>
+                <label for="implementar_tipos">Seleccione el tipo:</label>
+                    <select id="implementar_tipos" name="tipos" required>
+                        <option value="Eólica">Eólica
+                        <option value="Hidroeléctrica">Hidroeléctrica
+                        <option value="Solar">Solar
+                    </select>
+                <label for="implementar_descripcion">Descripción:</label>
+                    <input id="implementar_descripcion"
+                    name="descripcion" 
+                    type="text" 
+                    placeholder="Ej. Represa ubicada en ..."
+                    minlength="4"
+                    maxlength="20"
+                    required>
+                    <p class="validation">Debe contener entre 4 y 20 caracteres.</p>
+                <label for="implementar_energia">Energía generada en Kw/h:</label>
+                    <input id="implementar_energia"
+                    name="cantidadEnergía"
+                    type="number"
+                    placeholder="Ej.: 10000"
+                    required>
+                    <p class="validation">Debe ingresar números enteros.</p>
+                <label for="implementar_presupuesto">Presupuesto requerido en pesos:</label>
+                    <input id="implementar_presupuesto"
+                    name="presupuesto"
+                    type="number"
+                    placeholder="Ej.: 100000"
+                    required>
+                    <p class="validation">Debe ingresar números enteros.</p>
+                <label for="implementar_tiempo">Tiempo estimado de implementación en meses:</label>
+                    <input id="implementar_tiempo"
+                    name="tiempo"
+                    type="number"
+                    placeholder="Ej.: 12"
+                    required>
+                    <p class="validation">Debe ingresar números enteros.</p>
+                <button>Agregar implementación</button>
+            </form>
         </section>
-        <section>
+        <section class="resultado">
             <h2>Resultado</h2>
+            <div class="table">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Tipo de energía</th>
+                        <th>Nombre de enregía</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Fila 1, Columna 1</td>
+                        <td>Fila 1, Columna 2</td>
+                      </tr>
+                      <tr>
+                        <td>Fila 2, Columna 1</td>
+                        <td>Fila 2, Columna 2</td>
+                      </tr>
+                      <tr>
+                        <td>Fila 3, Columna 1</td>
+                        <td>Fila 3, Columna 2</td>
+                      </tr>
+                      <tr>
+                        <td>Fila 4, Columna 1</td>
+                        <td>Fila 4, Columna 2</td>
+                      </tr>
+                      <tr>
+                        <td>Fila 5, Columna 1</td>
+                        <td>Fila 5, Columna 2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
         </section>
     </main>
     <script src="js/index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
 </body>
 </html>
