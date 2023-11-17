@@ -24,7 +24,7 @@
   .col-md-7 {
     width: 58.3333333333%;
   }
-  .col-md-8, form {
+  .col-md-8, form, .table {
     width: 66.6666666667%;
   }
   .col-md-9 {
@@ -75,7 +75,7 @@
   .col-lg-10 {
     width: 83.3333333333%;
   }
-  .col-lg-11 {
+  .col-lg-11, .table {
     width: 91.6666666667%;
   }
   .col-lg-12, form {
@@ -174,7 +174,7 @@
   color: rgb(89, 59, 42);
 }
 
-.text-success {
+.text-success, form input:focus:valid + .validation, form select:focus:valid + .validation {
   color: #3c6;
 }
 
@@ -182,7 +182,7 @@
   color: #da3;
 }
 
-.text-danger {
+.text-danger, form input:focus:not(:placeholder-shown):invalid + .validation, form select:focus:not(:placeholder-shown):invalid + .validation {
   color: #c33;
 }
 
@@ -222,7 +222,7 @@
   border-color: rgb(89, 59, 42);
 }
 
-.border-success {
+.border-success, form input:focus:valid, form select:focus:valid {
   border-color: #3c6;
 }
 
@@ -230,7 +230,7 @@
   border-color: #da3;
 }
 
-.border-danger {
+.border-danger, form input:focus:not(:placeholder-shown):invalid, form select:focus:not(:placeholder-shown):invalid {
   border-color: #c33;
 }
 
@@ -245,7 +245,7 @@
   scroll-behavior: smooth;
 }
 
-html, body, section {
+html, body {
   width: 100%;
 }
 
@@ -309,18 +309,6 @@ form .validation {
   overflow: hidden;
 }
 
-form {
-  margin: 0.5rem;
-  border: 0;
-  padding: 0.25rem;
-}
-form input, form select {
-  width: 100%;
-}
-form h3, form select, form p {
-  margin-bottom: 0.5rem;
-}
-
 button {
   margin: 0.5rem;
   border: 0;
@@ -331,9 +319,6 @@ button {
   border-radius: 0.25rem;
 }
 
-<<<<<<< HEAD
-.shadow, header, main, form {
-=======
 .table {
   margin: 0.5rem;
   overflow-x: hidden;
@@ -355,7 +340,6 @@ th, td {
 }
 
 .shadow, header, main, form, .table {
->>>>>>> d4c4931 (style(web) change color variables)
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
@@ -373,6 +357,9 @@ th, td {
   main {
     grid-template-columns: 35% auto;
     grid-template-rows: auto;
+  }
+  .resultado {
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1200px) {

@@ -1,4 +1,5 @@
 @forward "properties";
+@use 'sass:math';
 @use "variables" as var;
 @use "mixins" as mix;
 
@@ -10,7 +11,7 @@
     scroll-behavior: smooth;
 }
 
-html, body, section{
+html, body{
     width: 100%;
 }
 
@@ -52,6 +53,16 @@ form{
             & + .validation{
                 opacity: 1;
             }
+
+            &:valid{
+                @extend .border-success;
+                & + .validation{ @extend .text-success; }
+            }
+
+            &:not(:placeholder-shown):invalid{
+                @extend .border-danger;
+                & + .validation{ @extend .text-danger; }
+            }
         }
     }
 
@@ -68,22 +79,6 @@ form{
         overflow: hidden;
     }
 }
-
-form{
-    @include mix.normalize(.5rem, $pv:.25rem);
-    @extend .col-md-8;
-    
-    input, select{
-        width: 100%;
-    }
-
-    h3, select, p{
-        margin-bottom:  .5rem;
-    }
-}
-
-
-
 
 button{
     @extend .bg-dark;
@@ -133,6 +128,10 @@ table {
     main{
         grid-template-columns: 35% auto;
         grid-template-rows: auto;
+    }
+    
+    .resultado{
+        justify-content: flex-start;
     }
 }
 
