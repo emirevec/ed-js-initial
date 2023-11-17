@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Js - Initial</title>
 </head>
+
 <body>
     <header>
         <h1>Calculadora de eficiencia energética</h1>
@@ -18,41 +20,24 @@
             <form id="implementar" action="">
                 <h3>Ingrese los datos debajo:</h3>
                 <label for="implementar_tipos">Seleccione el tipo:</label>
-                    <select id="implementar_tipos" name="tipos" required>
-                        <option value="Eólica">Eólica
-                        <option value="Hidroeléctrica">Hidroeléctrica
-                        <option value="Solar">Solar
-                    </select>
+                <select id="implementar_tipos" name="tipos" required>
+                    <option value="Eólica">Eólica
+                    <option value="Hidroeléctrica">Hidroeléctrica
+                    <option value="Solar">Solar
+                </select>
                 <label for="implementar_descripcion">Descripción:</label>
-                    <input id="implementar_descripcion"
-                    name="descripcion" 
-                    type="text" 
-                    placeholder="Ej. Represa ubicada en ..."
-                    minlength="4"
-                    maxlength="20"
-                    required>
-                    <p class="validation">Debe contener entre 4 y 20 caracteres.</p>
+                <input id="implementar_descripcion" name="descripcion" type="text"
+                    placeholder="Ej. Represa ubicada en ..." minlength="4" maxlength="20" required>
+                <p class="validation">Debe contener entre 4 y 20 caracteres.</p>
                 <label for="implementar_energia">Energía generada en Kw/h:</label>
-                    <input id="implementar_energia"
-                    name="cantidadEnergía"
-                    type="number"
-                    placeholder="Ej.: 10000"
-                    required>
-                    <p class="validation">Debe ingresar números enteros.</p>
+                <input id="implementar_energia" name="cantidadEnergía" type="number" placeholder="Ej.: 10000" required>
+                <p class="validation">Debe ingresar números enteros.</p>
                 <label for="implementar_presupuesto">Presupuesto requerido en pesos:</label>
-                    <input id="implementar_presupuesto"
-                    name="presupuesto"
-                    type="number"
-                    placeholder="Ej.: 100000"
-                    required>
-                    <p class="validation">Debe ingresar números enteros.</p>
+                <input id="implementar_presupuesto" name="presupuesto" type="number" placeholder="Ej.: 100000" required>
+                <p class="validation">Debe ingresar números enteros.</p>
                 <label for="implementar_tiempo">Tiempo estimado de implementación en meses:</label>
-                    <input id="implementar_tiempo"
-                    name="tiempo"
-                    type="number"
-                    placeholder="Ej.: 12"
-                    required>
-                    <p class="validation">Debe ingresar números enteros.</p>
+                <input id="implementar_tiempo" name="tiempo" type="number" placeholder="Ej.: 12" required>
+                <p class="validation">Debe ingresar números enteros.</p>
                 <button>Agregar implementación</button>
             </form>
         </section>
@@ -66,8 +51,9 @@
     <script src="js/templates.js"></script>
     <script src="js/data.js"></script>
     <script>
-      let template = Handlebars.templates["table"]
-      document.getElementById("table").innerHTML +=template(data);
+        let template = Handlebars.templates["table"]
+        document.getElementById("table").innerHTML += template(data);
     </script>
 </body>
+
 </html>
