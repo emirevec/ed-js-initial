@@ -1,8 +1,6 @@
-const d = document;
-const btnCalcluar = d.querySelector("button")
-let energia;  
-let presupuesto; 
-let tiempo; 
+let energia = 0;  
+let presupuesto = 0; 
+let tiempo = 0; 
 
 function validarDatos(dato){
     if (Number.isNaN(dato)){
@@ -32,5 +30,4 @@ function calcuar (){
     alert(efectividad)
 }
 
-btnCalcluar.addEventListener("click", calcuar);
-
+$("#calcular").click(calcuar);
