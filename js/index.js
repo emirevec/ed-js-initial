@@ -4,14 +4,15 @@ let energia = 0;
 let presupuesto = 0; 
 let tiempo = 0; 
 
-$(document).ready(function(){ 
-
+function start (){
     const selectImplementarTipos = $("#implementar_tipos");
     tiposEnergia.valores.forEach(valor =>{
         const option = $('<option>', {value: valor, text: valor});
         selectImplementarTipos.append(option);
     })
-})
+};
+
+$(document).ready(start());
 
 /*
 function validarDatos(dato){
