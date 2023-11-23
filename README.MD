@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [Project Description](#project-description)
 - [Workflow](#workflow)
+- [Javascript Libraries](#javascript-libraries-used)
 - [SASS and Responsive Grid](#sass-and-responsive-grid)
 
 ## Introduction
@@ -17,6 +18,13 @@ The creation of an application for the processing of statistical data, which is 
 ## Workflow
 
 We follow a development workflow inspired by GitFlow, which provides a structured approach to branch management. While we use GitFlow as a guideline, we also maintain the flexibility to adapt the workflow as needed to fit the requirements of our project.
+
+## Javascript Libraries Used
+
+This project leverages the following JavaScript libraries to enhance its functionality:
+
+- jQuery is employed in this project to streamline client-side scripting and enhance the user interface.
+- Handlebars is utilized in this project to efficiently manage and generate HTML content dynamically.
 
 ## SASS and Responsive Grid
 
