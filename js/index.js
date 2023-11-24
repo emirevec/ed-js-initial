@@ -1,8 +1,19 @@
+import * as templates from "./templates.js";
 import tiposEnergia from "./tiposEnergia.js";
 
-let energia = 0;  
-let presupuesto = 0; 
-let tiempo = 0; 
+let data = {
+    info: [
+        {
+            tipoDeEnergia:"Eólica",
+            descripcion:"Molino a 2km",
+            energiaGenerada:"1500",
+            presupuesto:"500000",
+            tiempoEstimado:"2"
+        }
+    ]}   
+
+let template = Handlebars.templates["table"]
+$("#table").append(template(data));
 
 function start (){
     const selectImplementarTipos = $("#implementar_tipos");
@@ -12,9 +23,34 @@ function start (){
     })
 };
 
+
+$("#implementar_submit").on("click", function(e){
+    e.preventDefault();
+    let tipoEnergia = $("#implementar_tipos").val();
+    let descripcion = $("#implementar_descripcion").val();
+    let energia =  $("#implementar_energia").val();
+    let presupuesto = $("#implementar_presupuesto").val();
+    let tiempo = $("#implementar_tiempo").val();
+    let nuevaImplementacion = {
+        tipoDeEnergia: tipoEnergia,
+        descripcion: descripcion,
+        energiaGenerada: energia,
+        presupuesto: presupuesto,
+        tiempoEstimado: tiempo
+    }
+    data.info.push(nuevaImplementacion);
+    console.log(data);
+    $("#implementar")[0].reset();
+})
+
 $(document).ready(start());
 
+export default data;
+
 /*
+let energia = 0;  
+let presupuesto = 0; 
+let tiempo = 0; 
 function validarDatos(dato){
     if (Number.isNaN(dato)){
         alert("Error! Debe ingresar un número entero");
