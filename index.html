@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Js - Initial</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
 </head>
-
-
 <body>
     <header>
         <h1>Calculadora de eficiencia energética</h1>
@@ -25,8 +24,7 @@
                     <option value=""></option>
                 </select>
                 <label for="implementar_descripcion">Descripción:</label>
-                <input id="implementar_descripcion" name="descripcion" type="text"
-                    placeholder="Ej. Represa ubicada en ..." minlength="4" maxlength="20" required>
+                <input id="implementar_descripcion" name="descripcion" type="text" placeholder="Ej. Represa ubicada en ..." minlength="4" maxlength="20" required>
                 <p class="validation">Debe contener entre 4 y 20 caracteres.</p>
                 <label for="implementar_energia">Energía generada en Kw/h:</label>
                 <input id="implementar_energia" name="cantidadEnergía" type="number" placeholder="Ej.: 10000" required>
@@ -37,7 +35,7 @@
                 <label for="implementar_tiempo">Tiempo estimado de implementación en meses:</label>
                 <input id="implementar_tiempo" name="tiempo" type="number" placeholder="Ej.: 12" required>
                 <p class="validation">Debe ingresar números enteros.</p>
-                <button>Agregar implementación</button>
+                <button type="reset" id="implementar_submit">Agregar implementación</button>
             </form>
         </section>
         <section class="resultado">
@@ -45,14 +43,7 @@
             <div id="table" class="table"></div>
         </section>
     </main>
-    <script src="js/index.js" type="module"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-    <script src="js/templates.js"></script>
-    <script src="js/data.js"></script>
-    <script>
-        let template = Handlebars.templates["table"]
-        document.getElementById("table").innerHTML += template(data);
-    </script>
+    <script src="js/index.js" type="module"></script>    
 </body>
 
 </html>
