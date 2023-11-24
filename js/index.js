@@ -1,19 +1,9 @@
 import * as templates from "./templates.js";
 import tiposEnergia from "./tiposEnergia.js";
 
-let data = {
-    info: [
-        {
-            tipoDeEnergia:"Eólica",
-            descripcion:"Molino a 2km",
-            energiaGenerada:"1500",
-            presupuesto:"500000",
-            tiempoEstimado:"2"
-        }
-    ]}   
+let data = {info: []};
 
-let template = Handlebars.templates["table"]
-$("#table").append(template(data));
+let template = Handlebars.templates["table"];
 
 function start (){
     const selectImplementarTipos = $("#implementar_tipos");
@@ -23,7 +13,6 @@ function start (){
     })
 };
 
-
 $("#implementar_submit").on("click", function(e){
     e.preventDefault();
     let tipoEnergia = $("#implementar_tipos").val();
@@ -31,6 +20,7 @@ $("#implementar_submit").on("click", function(e){
     let energia =  $("#implementar_energia").val();
     let presupuesto = $("#implementar_presupuesto").val();
     let tiempo = $("#implementar_tiempo").val();
+    $("#implementar")[0].reset();
     let nuevaImplementacion = {
         tipoDeEnergia: tipoEnergia,
         descripcion: descripcion,
@@ -38,14 +28,12 @@ $("#implementar_submit").on("click", function(e){
         presupuesto: presupuesto,
         tiempoEstimado: tiempo
     }
+
     data.info.push(nuevaImplementacion);
-    console.log(data);
-    $("#implementar")[0].reset();
-})
+    $("#table").append(template(data));
+});
 
 $(document).ready(start());
-
-export default data;
 
 /*
 let energia = 0;  
