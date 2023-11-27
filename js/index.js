@@ -2,7 +2,6 @@ import * as templates from "./templates.js";
 import tiposEnergia from "./tiposEnergia.js";
 
 let data = {info: []};
-
 let template = Handlebars.templates["table"];
 
 function start (){
