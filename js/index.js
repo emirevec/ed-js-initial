@@ -2,8 +2,8 @@ import * as templates from "./templates.js";
 import tiposEnergia from "./tiposEnergia.js";
 
 let data = {info: []};
-
 let template = Handlebars.templates["table"];
+let templatePortrait = Handlebars.templates["tablePortrait"];
 
 function start (){
     const selectImplementarTipos = $("#implementar_tipos");
@@ -31,6 +31,8 @@ $("#implementar_submit").on("click", function(e){
 
     data.info.push(nuevaImplementacion);
     $("#table").append(template(data));
+    $("#tablePortrait").append(templatePortrait(data));
+    data = {info: []};
 });
 
 $(document).ready(start());

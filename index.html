@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Js - Initial</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Calculadora de eficiencia energética</h1>
@@ -24,7 +26,8 @@
                     <option value=""></option>
                 </select>
                 <label for="implementar_descripcion">Descripción:</label>
-                <input id="implementar_descripcion" name="descripcion" type="text" placeholder="Ej. Represa ubicada en ..." minlength="4" maxlength="20" required>
+                <input id="implementar_descripcion" name="descripcion" type="text"
+                    placeholder="Ej. Represa ubicada en ..." minlength="4" maxlength="20" required>
                 <p class="validation">Debe contener entre 4 y 20 caracteres.</p>
                 <label for="implementar_energia">Energía generada en Kw/h:</label>
                 <input id="implementar_energia" name="cantidadEnergía" type="number" placeholder="Ej.: 10000" required>
@@ -40,10 +43,26 @@
         </section>
         <section class="resultado">
             <h2>Resultado</h2>
-            <div id="table" class="table"></div>
+            <table id="portrait" class="table">
+                <tbody id="tablePortrait">
+                </tbody>
+            </table>
+            <table id="landscape" class="table">
+                <thead>
+                    <tr>
+                        <th>Tipo de energía.</th>
+                        <th>Nombre de enregía</th>
+                        <th>Energía Kws.</th>
+                        <th>Presupuesto $.</th>
+                        <th>Tiempo meses.</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                </tbody>
+            </table>
         </section>
     </main>
-    <script src="js/index.js" type="module"></script>    
+    <script src="js/index.js" type="module"></script>
 </body>
 
 </html>
