@@ -118,6 +118,10 @@ table {
                 0 16px 16px rgba(0,0,0,0.12);   
 }
 
+#landscape{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     section{
         @include mix.flexbox($fd:column);
@@ -132,6 +136,12 @@ table {
     
     .resultado{
         justify-content: flex-start;
+    }
+    #landscape{
+        display: block;
+    }
+    #portrait{
+        display: none;
     }
 }
 
