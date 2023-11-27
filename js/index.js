@@ -30,6 +30,7 @@ $("#implementar_submit").on("click", function(e){
 
     data.info.push(nuevaImplementacion);
     $("#table").append(template(data));
+    data = {info: []};
 });
 
 $(document).ready(start());
