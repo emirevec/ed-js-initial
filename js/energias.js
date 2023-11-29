@@ -13,6 +13,4 @@ let energias = [
     }
 ]
 
-console.log(energias[0].nombre);
-
 export default energias;
