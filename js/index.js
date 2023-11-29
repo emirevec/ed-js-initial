@@ -1,5 +1,6 @@
 import * as templates from "./templates.js";
 import tiposEnergia from "./tiposEnergia.js";
+import energias from "./energias.js";
 
 let data = {info: []};
 let template = Handlebars.templates["table"];
@@ -32,10 +33,29 @@ $("#implementar_submit").on("click", function(e){
         efectividad: efectividadImplementacion
     }
 
+    switch (nuevaImplementacion.tipoDeEnergia) {
+        case "Eólica":
+            energias[0].eficiencia += nuevaImplementacion.efectividad;
+            break;
+        case "Hidroeléctrica":
+            energias[1].eficiencia += nuevaImplementacion.efectividad;
+            break;
+        case "Solar":
+            energias[2].eficiencia += nuevaImplementacion.efectividad;
+            break;
+        default:
+            console.log("Tipo de energía no reconocido");
+    }
+
+    console.log(energias[0].eficiencia);
+    console.log(energias[1].eficiencia);
+    console.log(energias[2].eficiencia);
+    
     data.info.push(nuevaImplementacion);
     $("#table").append(template(data));
     $("#tablePortrait").append(templatePortrait(data));
     data = {info: []};
 });
+
 
 $(document).ready(start());
