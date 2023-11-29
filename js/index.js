@@ -31,6 +31,11 @@ $("#implementar_submit").on("click", function(e){
         efectividad: efectividadImplementacion
     }
 
+    data.info.push(nuevaImplementacion);
+    $("#table").append(template(data));
+    $("#tablePortrait").append(templatePortrait(data));
+    data = {info: []};
+
     switch (nuevaImplementacion.tipoDeEnergia) {
         case "Eólica":
             energias[0].eficiencia += nuevaImplementacion.efectividad;
@@ -44,15 +49,13 @@ $("#implementar_submit").on("click", function(e){
         default:
             console.log("Tipo de energía no reconocido");
     }
-
-    console.log(energias[0].eficiencia);
-    console.log(energias[1].eficiencia);
-    console.log(energias[2].eficiencia);
     
-    data.info.push(nuevaImplementacion);
-    $("#table").append(template(data));
-    $("#tablePortrait").append(templatePortrait(data));
-    data = {info: []};
+    return energias
 });
+
+$("#btn_procesar").on("click", function(e){
+    e.preventDefault();
+    console.log(energias);
+})
 
 $(document).ready(start());
