@@ -1,4 +1,5 @@
-let energias = [
+let energias = {
+    energia:[
     {
         nombre: "Eólica",
         eficiencia: 0
@@ -11,6 +12,6 @@ let energias = [
         nombre: "Solar",
         eficiencia: 0
     }
-]
+]}
 
 export default energias;

@@ -4,11 +4,12 @@ import energias from "./energias.js";
 let data = {info: []};
 let template = Handlebars.templates["table"];
 let templatePortrait = Handlebars.templates["tablePortrait"];
+let templateProcesados = Handlebars.templates["tableProcesados"];
 
 function start (){
     const selectImplementarTipos = $("#implementar_tipos");
-    energias.forEach(energia =>{
-        const option = $('<option>', {value: energia.nombre, text: energia.nombre});
+    energias.energia.forEach(arrayPosition =>{
+        const option = $('<option>', {value: arrayPosition.nombre, text: arrayPosition.nombre});
         selectImplementarTipos.append(option);
     })
 }; 
@@ -38,13 +39,13 @@ $("#implementar_submit").on("click", function(e){
 
     switch (nuevaImplementacion.tipoDeEnergia) {
         case "Eólica":
-            energias[0].eficiencia += nuevaImplementacion.efectividad;
+            energias.energia[0].eficiencia += nuevaImplementacion.efectividad;
             break;
         case "Hidroeléctrica":
-            energias[1].eficiencia += nuevaImplementacion.efectividad;
+            energias.energia[1].eficiencia += nuevaImplementacion.efectividad;
             break;
         case "Solar":
-            energias[2].eficiencia += nuevaImplementacion.efectividad;
+            energias.energia[2].eficiencia += nuevaImplementacion.efectividad;
             break;
         default:
             console.log("Tipo de energía no reconocido");
@@ -55,7 +56,8 @@ $("#implementar_submit").on("click", function(e){
 
 $("#btn_procesar").on("click", function(e){
     e.preventDefault();
-    console.log(energias);
+    $("#tableProcesados").empty();
+    $("#tableProcesados").append(templateProcesados({energias}));
 })
 
 $(document).ready(start());
