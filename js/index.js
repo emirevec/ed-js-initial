@@ -1,5 +1,4 @@
 import * as templates from "./templates.js";
-import tiposEnergia from "./tiposEnergia.js";
 import energias from "./energias.js";
 
 let data = {info: []};
@@ -8,12 +7,11 @@ let templatePortrait = Handlebars.templates["tablePortrait"];
 
 function start (){
     const selectImplementarTipos = $("#implementar_tipos");
-    tiposEnergia.valores.forEach(valor =>{
-        const option = $('<option>', {value: valor, text: valor});
+    energias.forEach(energia =>{
+        const option = $('<option>', {value: energia.nombre, text: energia.nombre});
         selectImplementarTipos.append(option);
     })
 }; 
-
 
 $("#implementar_submit").on("click", function(e){
     e.preventDefault();
@@ -56,6 +54,5 @@ $("#implementar_submit").on("click", function(e){
     $("#tablePortrait").append(templatePortrait(data));
     data = {info: []};
 });
-
 
 $(document).ready(start());
