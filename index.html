@@ -17,7 +17,7 @@
         <h1>Calculadora de eficiencia energética</h1>
     </header>
     <main>
-        <section>
+        <section id="datos">
             <h2>Nueva implementación</h2>
             <form id="implementar" action="">
                 <h3>Ingrese los datos debajo:</h3>
@@ -41,7 +41,7 @@
                 <button id="implementar_submit">Agregar implementación</button>
             </form>
         </section>
-        <section class="resultado">
+        <section id="resultados">
             <h2>Resultado</h2>
             <table id="portrait" class="table">
                 <tbody id="tablePortrait">
@@ -60,7 +60,10 @@
                 <tbody id="table">
                 </tbody>
             </table>
+        </section>
+        <section id="procesados">
             <button id="btn_procesar">Procesar información</button>
+            <div id="eficiencia"></div>
         </section>
     </main>
     <script src="js/index.js" type="module"></script>
