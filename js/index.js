@@ -39,13 +39,19 @@ $("#implementar_submit").on("click", function(e){
 
     switch (nuevaImplementacion.tipoDeEnergia) {
         case "Eólica":
-            energias.energia[0].eficiencia += nuevaImplementacion.efectividad;
+            energias.energia[0].implementaciones += 1;
+            energias.energia[0].efectividadAcumulada += nuevaImplementacion.efectividad;
+            energias.energia[0].eficiencia = (energias.energia[0].efectividadAcumulada/energias.energia[0].implementaciones);
             break;
         case "Hidroeléctrica":
-            energias.energia[1].eficiencia += nuevaImplementacion.efectividad;
+            energias.energia[1].implementaciones += 1;
+            energias.energia[1].efectividadAcumulada += nuevaImplementacion.efectividad;
+            energias.energia[1].eficiencia = (energias.energia[1].efectividadAcumulada/energias.energia[1].implementaciones);
             break;
         case "Solar":
-            energias.energia[2].eficiencia += nuevaImplementacion.efectividad;
+            energias.energia[2].implementaciones += 1;
+            energias.energia[2].efectividadAcumulada += nuevaImplementacion.efectividad;
+            energias.energia[2].eficiencia = (energias.energia[2].efectividadAcumulada/energias.energia[2].implementaciones);
             break;
         default:
             console.log("Tipo de energía no reconocido");
