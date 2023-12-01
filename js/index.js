@@ -57,7 +57,11 @@ $("#implementar_submit").on("click", function(e){
             console.log("Tipo de energía no reconocido");
     }
     
-    return energias
+    let maxEficiencia = energias.energia.reduce((max, current) => {
+        return current.efectividadAcumulada > max.efectividadAcumulada ? current : max;
+    });
+        
+    return energias, maxEficiencia;
 });
 
 $("#btn_procesar").on("click", function(e){
