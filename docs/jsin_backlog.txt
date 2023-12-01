@@ -1,0 +1,58 @@
+Proyecto integrador inicial:
+
+HTML.
+
+
+SASS. 
+
+Formato de numeros con ,00.
+Landscape. Ajustar contenido al ancho de la tabla, sino queda un blanco al final.
+Portrait. Cambiar layout para pequeños dispositivos. Falta resaltar cada encabezado.
+Sección tabla datos.
+Formulario, maquetación para la validación de datos.
+
+
+Js
+
+
+Unificar criterio entre template y templetaProcesados
+Achicar el switch con un foreach.
+
+
+
+Sección con el tipo de energía más eficiente.
+
+Función Calcular; 
+Mejorar utilizando formdata.
+Armar la lógica para el acceso al objeto de datos.
+
+
+FINALIZADO
+
+Sección con la eficiencia de cada tipo de energía.
+Ingresar a la variable eficiencia total el proporcional de cada implementación.
+Crear una variable por cada tipo de energía para registrar la eficiencia total.
+Armar tabla y template para exponer.
+Boton “procesar resultados”. 
+Agregar ‘eficiencia’ al objeto de datos.
+Queda cargada la variable nuevaImplementación, y repite todo al momento de agregarle un nuevo valor. Corregir.
+Landscape. Agregar encabezados.
+Funciones; Validar; 
+Que se pueda agregar al array todo desde el tipo de energía, etc. 
+Energía + datos. > Otra energía?  Vuelve atrás >  y expone.
+Formulario. Validación de datos ingresados.
+Implementar Jquery.
+HB. Agregar el div con # al cual insertar el contenido.
+HB. Armar y compilar el template para la tabla con un each?
+HB. Armar el objeto de datos.
+Tabla con contenido dinámico con Handlebar.
+Agregar almacén de datos. En arrays? Como?
+Control de ingreso de datos con condicionales. Para el ingreso de la info. Prompt con lógica.
+Primera etapa superada con prompt y alert. Solo para calculos “dinámicos”, no guarda datos en ningún lado.
+Agregar más info al README.MD como ser la metodología utilizada para el manejo del repositorio. Workflow.
+Formulario y tabla con exposición de datos.
+Encabezado.
+Estructura, layout o diseño. 
+Reutilizando código ya generado. Aplicando display grid y modelo de 12 grillas.
+La estructura de archivos sass. Variables para definir pantallas, propiedades, colores. Properties para la combinación de variables. Mixins si se necesitaran.
+Index vinculado al html. Forward al resto de archivos. Incluirá reglas generales y la aplicación del display grid.
