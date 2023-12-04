@@ -334,10 +334,18 @@ table {
   font-weight: 400;
 }
 
+thead {
+  width: 100%;
+}
+
 th, td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
+}
+
+th {
+  width: 20%;
 }
 
 .shadow, header, main, form, .table {
