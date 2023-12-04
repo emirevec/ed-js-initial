@@ -42,6 +42,7 @@ form{
     @include mix.normalize(.5rem, $pv:.5rem);
     @include mix.flexbox($fd:column, $ai:flex-start, $g:.25rem);
     @extend .shadow, .col-md-8, .col-lg-12;
+    width: 95%;
     background-color: white;
     border-radius: .5rem;
     //color: var.$color-primary;
@@ -97,7 +98,7 @@ button{
 }
 
 table {
-    width: 100%;
+    width: 95%;
     background-color: white;
     border-collapse: collapse;
     color: var.$color-primary;
@@ -122,6 +123,14 @@ th, td {
     display: none;
 }
 
+#masEficiente{
+    @include mix.normalize($mv:.5rem, $pv:.25rem);
+    @include mix.flexbox();
+    @extend .text-dark;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
     section{
         @include mix.flexbox($fd:column);
@@ -132,7 +141,8 @@ th, td {
     main{
         grid-template-areas: 
             'dat res'
-            'dat pro';
+            'dat pro'
+            'dat efi';
     }
     #datos{
         grid-area: dat;
@@ -144,8 +154,11 @@ th, td {
     #procesados{
         grid-area: pro;
     }
-        #landscape{
-        display: block;
+    #masEficiente{
+        grid-area: efi;
+    }
+    #landscape{
+    display: block;
     }
     #portrait{
         display: none;
