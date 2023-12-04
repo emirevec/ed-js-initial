@@ -56,18 +56,19 @@ $("#implementar_submit").on("click", function(e){
         default:
             console.log("Tipo de energía no reconocido");
     }
-    
-    let maxEficiencia = energias.energia.reduce((max, current) => {
-        return current.efectividadAcumulada > max.efectividadAcumulada ? current : max;
-    });
-        
-    return energias, maxEficiencia;
+
+    return energias;
 });
 
 $("#btn_procesar").on("click", function(e){
     e.preventDefault();
+    let maxEficiencia = energias.energia.reduce((max, current) => {
+        return current.efectividadAcumulada > max.efectividadAcumulada ? current : max;
+    });
     $("#tableProcesados").empty();
     $("#tableProcesados").append(templateProcesados({energias}));
+    $("#masEficiente").empty();
+    $("#masEficiente").append("<p>El tipo " + maxEficiencia.nombre + " es recomendado, su eficiencia es de " + maxEficiencia.eficiencia + ".</p>");
 })
 
 $(document).ready(start());
