@@ -5,22 +5,14 @@ HTML.
 
 SASS. 
 
-Formato de numeros con ,00.
-Landscape. Ajustar contenido al ancho de la tabla, sino queda un blanco al final.
-Portrait. Cambiar layout para pequeños dispositivos. Falta resaltar cada encabezado.
-Sección tabla datos.
 Formulario, maquetación para la validación de datos.
 
 
 Js
 
-
+Formato de numeros con ,00.
 Unificar criterio entre template y templetaProcesados
 Achicar el switch con un foreach.
-
-
-
-Sección con el tipo de energía más eficiente.
 
 Función Calcular; 
 Mejorar utilizando formdata.
@@ -28,7 +20,10 @@ Armar la lógica para el acceso al objeto de datos.
 
 
 FINALIZADO
-
+Landscape. Ajustar contenido al ancho de la tabla, sino queda un blanco al final.
+Sección tabla datos.
+Dar formato a section masEficiente.
+Sección con el tipo de energía más eficiente.
 Sección con la eficiencia de cada tipo de energía.
 Ingresar a la variable eficiencia total el proporcional de cada implementación.
 Crear una variable por cada tipo de energía para registrar la eficiencia total.
